@@ -1,26 +1,18 @@
 import requests
-import json
 import pandas as pd
 import streamlit as st
-import datetime as dt
 import quantstats as qs
-from dateutil import parser
-#import plotly.graph_objs as go
 import plotly.express as px
 import constants.constants as comps
-
-#from models.strategy_tester import GuruTester
 from technicals.indicators import RSI
 from technicals.patterns import apply_properties_patterns
-
-from instruments.instrument_data import instrumentCollection
 from oanda_api.oanda_api import oandaApi as api
 from backtest_analysis.strategy_combined import GuruTester
 
 
-SELECT_4_PAIRS_FROM = ['AUD_JPY','AUD_USD','EUR_AUD','EUR_GBP','EUR_JPY','EUR_USD','GBP_AUD','GBP_JPY','GBP_USD','USD_JPY']
+SELECT_PAIRS_FROM = ['AUD_JPY','EUR_AUD','EUR_USD','GBP_AUD']
 
-TRADEABLE_PAIRS = ['AUD_JPY', 'EUR_USD', 'AUD_USD','EUR_JPY']
+TRADEABLE_PAIRS = ['AUD_JPY','EUR_AUD','EUR_USD','GBP_AUD']
 
 TIME_FRAME = 'H1' #for this strategy, select either H1 or H4
 
@@ -32,8 +24,7 @@ def convert_df_to_csv(df):
 def apply_signal(row):
     if row.ENGULFING == True and row.direction == 1:
         if row.RSI < 30:
-            return comps.BUY
-        
+            return comps.BUY     
     elif row.ENGULFING == True and row.direction == -1:
         if row.RSI > 70:
              return comps.SELL   
@@ -45,7 +36,6 @@ def run_strategy(pair,time_frame, risk_percent):
     data.reset_index(drop=True, inplace=True)
     data = apply_properties_patterns(data)
     data = RSI(data, n=rsi_value)
-
     our_cols = ['time','pair', 'mid_o', 'mid_h', 'mid_l', 'mid_c',
                 'bid_o', 'bid_h', 'bid_l', 'bid_c', 
                 'ask_o', 'ask_h', 'ask_l', 'ask_c',
@@ -57,7 +47,6 @@ def run_strategy(pair,time_frame, risk_percent):
     gt = GuruTester(df_slim, apply_signal,price_conv, risk_percent=risk_percent)   
     gt.run_test()
     return gt.df_results
-
 
 
 def calculate_statistics(returns):
@@ -135,7 +124,6 @@ if __name__ == '__main__':
     """)
 
 
-
 #create a list and return the result of each strategy by asset
     results = []
     for p in column_to_show:
@@ -170,7 +158,6 @@ if __name__ == '__main__':
         file_name="currency pairs_data.csv",
         mime="text/csv",
     )
-
 
     # Create a Plotly figure
     fig = px.line(df, x='start_time', y='cumulative_gain', color='pair', title='Cumulative Gain Over Time')
