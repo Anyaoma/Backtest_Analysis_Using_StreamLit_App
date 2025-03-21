@@ -1,6 +1,5 @@
 import pandas as pd
 import datetime as dt
-from datetime import datetime
 
 BUY = 1
 SELL = -1
@@ -11,10 +10,10 @@ def apply_takeprofit(row):
         if row.SIGNAL == BUY:
             return  row.ask_c + row.GAIN
         else:
-            return row.bid_c - row.GAIN
-        
+            return row.bid_c - row.GAIN       
     else:
         return NONE
+
 
 def apply_gain(row, PROFIT_FACTOR):
     if row.SIGNAL != NONE:
@@ -24,6 +23,7 @@ def apply_gain(row, PROFIT_FACTOR):
             return 30*PROFIT_FACTOR * 0.001
     return NONE
 
+
 def apply_loss(row):
     if row.SIGNAL != NONE:
         if row.pair.split('_')[1] != 'JPY':
@@ -31,7 +31,8 @@ def apply_loss(row):
         else:
             return 30 * 0.001
     return NONE
-    
+
+
 #note: when you buy or sell at the ask and bid price, you already paid the spread, so
 #you just have to make sure that your TP level is above your buy or sell price to make gain
 #but your stop loss should just be wide enough to account for volatility
@@ -52,8 +53,7 @@ def apply_signal_hour(df, PROFIT_FACTOR, sig):
     df['LOSS'] = df.apply(apply_loss, axis=1)
     df['TP'] = df.apply(apply_takeprofit, axis=1)
     df['SL'] = df.apply(apply_stoploss, axis=1, PROFIT_FACTOR=PROFIT_FACTOR )
-       
-      
+             
 
 def create_changes(df):
     #df_signals = df[df['SIGNAL'] != NONE].copy()
@@ -72,9 +72,7 @@ class Trade:
         self.start_index_m5 = row.name
         self.loss_in_pips = row.LOSS
         self.gain_in_pips = row.GAIN 
-        self.pair = row.pair
-        
-        
+        self.pair = row.pair     
 
         if row.SIGNAL == BUY:
             self.start_price = row.start_price_BUY
@@ -97,8 +95,7 @@ class Trade:
         self.end_time = row.time
         self.trigger_price = trigger_price
 
-    def update(self, row):
-        
+    def update(self, row):    
         if self.SIGNAL == BUY:
             if row.time - self.start_time > dt.timedelta(hours=48): #check time
                 self.close_trade(row, 'closed trade', row.bid_o)
@@ -107,7 +104,7 @@ class Trade:
             elif row.bid_l <= self.SL: #check stop loss levels
                 self.close_trade(row, 'LOSS', row.bid_l)
             
-        if self.SIGNAL == SELL:
+        elif self.SIGNAL == SELL:
             if row.time - self.start_time > dt.timedelta(hours=48): #check time
                 self.close_trade(row, 'closed trade', row.ask_o)
             elif row.ask_l <= self.TP: #check take profit levels
@@ -130,15 +127,12 @@ class GuruTester:
         self.units = 0
         self.price_conv = price_conv
         self.result = 0
-        self.realised_pnl = []
-
-        
+        #self.realised_pnl = []
 
     def prepare_data(self):
         apply_signal_hour(self.df_big,
                     self.PROFIT_FACTOR,
                     self.apply_signal)
-        
         
         df_signals = create_changes(self.df_big)
         df_signals['time'] = pd.to_datetime(df_signals['time'], unit='s')
@@ -236,8 +230,7 @@ class GuruTester:
             open_trades_m5 = [x for x in open_trades_m5 if x.running == True]
 
             if self.position == 0:
-                
-            
+                  
                 if row.SIGNAL != NONE:
                     trade = Trade(row)
                     open_trades_m5.append(trade)
