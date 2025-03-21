@@ -1,0 +1,7 @@
+streamlit==1.28.0
+pandas==2.1.1
+numpy==1.24.3
+requests==2.31.0
+python-dateutil==2.8.2
+quantstats==0.0.64
+plotly==5.18.0
