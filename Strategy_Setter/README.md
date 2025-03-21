@@ -1,4 +1,4 @@
-Features
+**Features**
 
 Signal Application: Apply trading signals (BUY, SELL, NONE) to historical Forex data.
 
@@ -10,7 +10,7 @@ Performance Metrics: Track realized and unrealized PnL, account balance, and ret
 
 Flexible Strategy Testing: Easily integrate custom trading strategies.
 
-Code Structure
+**Code Structure**
 The code is organized into the following components:
 
 Signal Application:
@@ -31,15 +31,15 @@ Simulates trades based on signals.
 
 Trades account balance, position sizing, and performance metrics.
 
-Data Preparation:
+**Data Preparation:**
 
 Functions like apply_signal_hour and create_changes preprocess the data and generate trading signals.
 
-Contributing
+**Contributing**
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-License
+**License**
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Contact
+**Contact**
 For questions or feedback, please contact [Gift Anyaoma] at [anyaomagiftndidi@gmail.com].
