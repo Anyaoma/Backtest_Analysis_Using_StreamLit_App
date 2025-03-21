@@ -1,4 +1,4 @@
-**Features**
+FEATURES
 
 Signal Application: Apply trading signals (BUY, SELL, NONE) to historical Forex data.
 
@@ -11,7 +11,7 @@ Performance Metrics: Track realized and unrealized PnL, account balance, and ret
 Flexible Strategy Testing: Easily integrate custom trading strategies.
 
 
-**Code Structure**: The code is organized into the following components:
+CODE STRUCTURE: The code is organized into the following components:
 
 Signal Application:Functions like apply_takeprofit, apply_gain, apply_loss, and apply_stoploss calculate take-profit, stop-loss, and position sizing based on trading signals.
 
@@ -21,18 +21,18 @@ GuruTester Class:The GuruTester class is the core of the backtesting framework. 
 
 
 
-**Data Preparation:**
+DATA PREPARATION
 
 Functions like apply_signal_hour and create_changes preprocess the data and generate trading signals.
 
 
-**Contributing**
+CONTRIBUTION
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 
-**License**
+LICENSE
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 
-**Contact**
+CONTACT
 For questions or feedback, please contact [Gift Anyaoma] at [anyaomagiftndidi@gmail.com].
