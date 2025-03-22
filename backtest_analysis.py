@@ -7,7 +7,7 @@ import constants.constants as comps
 from technicals.indicators import RSI
 from technicals.patterns import apply_properties_patterns
 from oanda_api.oanda_api import oandaApi as api
-from backtest_analysis.strategy_combined import GuruTester
+from Strategy_setter.strategy_setter import GuruTester
 
 
 SELECT_PAIRS_FROM = ['AUD_JPY','EUR_AUD','EUR_USD','GBP_AUD']
