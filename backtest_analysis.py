@@ -32,7 +32,7 @@ def apply_signal(row):
 
 
 def run_strategy(pair,time_frame, risk_percent):
-    data = pd.read_pickle(f"./data/{pair}_{time_frame}.pkl")
+    data = pd.read_pickle(f"./Data/{pair}_{time_frame}.pkl")
     data.reset_index(drop=True, inplace=True)
     data = apply_properties_patterns(data)
     data = RSI(data, n=rsi_value)
