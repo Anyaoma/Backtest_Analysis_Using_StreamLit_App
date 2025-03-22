@@ -5,7 +5,6 @@ from datetime import datetime as dt
 from dateutil import parser
 import constants.constants as comps
 from instruments.api_price import ApiPrice
-from instruments.instrument_data import instrumentCollection as ic
 
 
 class OandaApi:
