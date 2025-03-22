@@ -117,7 +117,7 @@ if __name__ == '__main__':
     st.title("Backtest analysis for Engulfing + RSI strategy")
     st.write("""
     ### User manual
-    * You can select any of the currencies that is a component of EUR_USD, GBP_JPY, GBP_USD
+    * You can select any of the currencies that is a component of AUD_JPY, EUR_AUD, EUR_USD, GBP_AUD
     * You can change the RSI components or levels
     * You can apply risk management by selecting the risk amount per trade
     * You can download the selected data as a CSV file
