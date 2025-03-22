@@ -56,7 +56,6 @@ def apply_signal_hour(df, PROFIT_FACTOR, sig):
              
 
 def create_changes(df):
-    #df_signals = df[df['SIGNAL'] != NONE].copy()
     df_signals = df.copy()
     df_signals.drop([ 'mid_o', 'mid_h', 'mid_l', 'direction'], axis=1, inplace=True)
     df_signals.rename(columns={
