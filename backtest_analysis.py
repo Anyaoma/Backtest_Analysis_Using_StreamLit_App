@@ -7,7 +7,7 @@ import constants.constants as comps
 from technicals.indicators import RSI
 from technicals.patterns import apply_properties_patterns
 from oanda_api.oanda_api import oandaApi as api
-from Strategy_Setter.strategy_setter import GuruTester
+from Strategy_Setter.strategy_setter import Tester
 
 
 SELECT_PAIRS_FROM = ['AUD_JPY','EUR_AUD','EUR_USD','GBP_AUD']
@@ -44,7 +44,7 @@ def run_strategy(pair,time_frame, risk_percent):
     df_slim.dropna(inplace=True)
         
     df_slim.reset_index(drop=True, inplace=True)
-    gt = GuruTester(df_slim, apply_signal,price_conv, risk_percent=risk_percent)   
+    gt = Tester(df_slim, apply_signal,price_conv, risk_percent=risk_percent)   
     gt.run_test()
     return gt.df_results
 
