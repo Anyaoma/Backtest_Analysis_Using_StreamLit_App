@@ -68,7 +68,7 @@ def create_changes(df):
 class Trade:
     def __init__(self, row):
         self.running = True
-        self.start_index_m5 = row.name
+        self.start_index = row.name
         self.loss_in_pips = row.LOSS
         self.gain_in_pips = row.GAIN 
         self.pair = row.pair     
@@ -113,7 +113,7 @@ class Trade:
             
 
 
-class GuruTester:
+class Tester:
     def __init__(self, df_big, apply_signal,price_conv,PROFIT_FACTOR=2,risk_percent=0.05):
         self.df_big = df_big.copy()
         self.PROFIT_FACTOR = PROFIT_FACTOR
