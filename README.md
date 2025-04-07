@@ -2,7 +2,8 @@
 
 This is a Streamlit app for displaying the backtest result of a combined ENGULFING and RSI strategy. 
 
-!(https://github.com/Anyaoma/Backtest_Analysis_Using_StreamLit_App/Image/streamlitinterface.png?raw=true)
+![image](https://github.com/user-attachments/assets/5a58ff20-9111-4234-af27-531bb5927461)
+
 
 
 On the interface, you can:
