@@ -9,9 +9,14 @@ This is a Streamlit app for displaying the backtest result of a combined ENGULFI
 On the interface, you can:
 
 *Select any of the currencies that is a component of EUR_USD, GBP_JPY, GBP_USD
+
 *Change the RSI components or levels
+
 *Apply risk management by selecting the risk amount per trade
+
 *Download the selected data as a CSV file
+
+The link to the dashboard on streamlit is: https://backtestanalysis-n.streamlit.app/
 
 ## How to Run
 1. Clone this repository.
