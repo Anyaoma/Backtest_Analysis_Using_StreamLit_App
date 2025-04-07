@@ -1,6 +1,11 @@
 # Streamlit App
 
-This is a Streamlit app for displaying the backtest result of a combined ENGULFING and RSI strategy. On the interface, you can:
+This is a Streamlit app for displaying the backtest result of a combined ENGULFING and RSI strategy. 
+
+
+
+
+On the interface, you can:
 
 *Select any of the currencies that is a component of EUR_USD, GBP_JPY, GBP_USD
 *Change the RSI components or levels
