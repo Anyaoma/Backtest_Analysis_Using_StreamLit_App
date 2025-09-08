@@ -44,7 +44,7 @@ This project solves that by creating a **user-friendly dashboard** that gives a 
    - Win/loss rate  
 4. Display results interactively through Streamlit components.
 
-5. The link to the dashboard on streamlit is: https://backtestanalysis-n.streamlit.app/
+5. The link to the dashboard on streamlit is: https://backtest-analysis-1.streamlit.app/
 
 
 ---
