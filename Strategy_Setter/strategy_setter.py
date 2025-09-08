@@ -165,7 +165,7 @@ class Tester:
 
     
     def update_result(self,object):
-        price_conv= [price.sell_conv for price in [self.price_conv] if price.instrument == object.pair]
+        price_conv= [price.sell_conv for price in self.price_conv if price.instrument == object.pair]
         if object.result == 'PROFIT':
             self.result = self.units * object.gain_in_pips * price_conv[0]
         elif object.result =='LOSS':
@@ -179,7 +179,7 @@ class Tester:
 
 
     def update_account_balance(self,object):
-        price_conv= [price.sell_conv for price in [self.price_conv] if price.instrument == object.pair]
+        price_conv= [price.sell_conv for price in self.price_conv if price.instrument == object.pair]
         if object.result == 'PROFIT':
             self.amount += self.units * object.gain_in_pips* price_conv[0]
         elif object.result =='LOSS':
@@ -215,11 +215,11 @@ class Tester:
                 else:
                     if ot.SIGNAL == BUY:
                         unrealised_pnl = self.units * (row.start_price_SELL - ot.start_price)
-                        unrealised_pnl= [price.sell_conv*unrealised_pnl for price in [self.price_conv] if price.instrument == ot.pair]
+                        unrealised_pnl= [price.sell_conv*unrealised_pnl for price in self.price_conv if price.instrument == ot.pair]
                         
                     else:
                         unrealised_pnl = self.units * (ot.start_price - row.start_price_BUY)
-                        unrealised_pnl= [price.sell_conv*unrealised_pnl for price in [self.price_conv] if price.instrument == ot.pair]
+                        unrealised_pnl= [price.sell_conv*unrealised_pnl for price in self.price_conv if price.instrument == ot.pair]
                         
                     #self.pnl += unrealised_pnl[0] #useful for multiple trades running at once
                     pnl_list.append(round(unrealised_pnl[0],2))
@@ -243,4 +243,5 @@ class Tester:
 
         self.df_results = pd.DataFrame.from_dict([vars(x) for x in closed_trades_m5]) 
         
+
 
