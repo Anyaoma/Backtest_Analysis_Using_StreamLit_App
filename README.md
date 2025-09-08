@@ -33,6 +33,9 @@ This project solves that by creating a **user-friendly dashboard** that gives a 
 - 
 <img width="1919" height="888" alt="image" src="https://github.com/user-attachments/assets/e261e6f7-8eea-4251-926d-27fe8b019452" />
 
+<img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/aba8d99a-da1b-4938-80ca-0f2196f8fcb1" />
+
+
 ---
 
 ## 4. Methodology
