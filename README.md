@@ -5,7 +5,7 @@ A Streamlit-based application for backtesting trading strategies, providing a bi
 ![image](https://github.com/user-attachments/assets/5a58ff20-9111-4234-af27-531bb5927461)
 
 
-## 1. PROJECT OVERVIEW
+## 1. Project Overview
 This project implements an interactive backtesting dashboard for analyzing trading strategies. 
 It enables traders and analysts to:
 - Backtest strategies on historical data
@@ -22,17 +22,31 @@ This project solves that by creating a **user-friendly dashboard** that gives a 
 
 ---
 
-## On the interface, you can:
+## 3. Features
+- 📈 Interactive charts of currency curves, drawdowns, and returns
+- ⚖️ Risk management metrics (Sharpe ratio, max drawdown)
+- 🔎 Trade-by-trade analysis table (an exhaustive downloadable CSV file of trade result)
+- ⚙️ User inputs to adjust risk amount per trade, currency, and RSI levels
+- 📊 Summary statistics panel for quick insights
+- 🖥️ Built entirely with **Streamlit** for ease of use
 
-*Select any of the currencies that is a component of EUR_USD, GBP_JPY, GBP_USD
+---
 
-*Change the RSI components or levels
+## 4. Methodology
+1. Load historical asset price data (Forex).  
+2. Apply the selected trading strategy with configurable parameters.  
+3. Compute key metrics:
+   - Annualized return
+   - Sharpe ratio
+   - Maximum drawdown
+   - Win/loss rate  
+4. Display results interactively through Streamlit components.
 
-*Apply risk management by selecting the risk amount per trade
+5. The link to the dashboard on streamlit is: https://backtestanalysis-n.streamlit.app/
 
-*Download the selected data as a CSV file
 
-The link to the dashboard on streamlit is: https://backtestanalysis-n.streamlit.app/
+---
+
 
 ## How to Run
 1. Clone this repository.
