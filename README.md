@@ -70,11 +70,10 @@ These results demonstrate how the app makes it easy to identify strategy strengt
 ---
 
 ## 7. How to Run
-1. Clone this repository: git clone https://github.com/Anyaoma/YourRepo.git
+1. Clone this repository: git clone https://github.com/Anyaoma/Backtest_Analysis_Using_StreamLit_App.git
 2. Install dependencies: `pip install -r requirements.txt`.
 3. Run the app: `streamlit run app.py`.
 
 ## 8. Conclusion
-9. Conclusion
 
 This project provides a flexible and interactive way to analyze trading strategies. By combining robust backtesting with a user-friendly Streamlit dashboard, traders can gain a clear bird’s-eye view of performance and risk metrics, making it easier to iterate, validate, and deploy profitable strategies.
