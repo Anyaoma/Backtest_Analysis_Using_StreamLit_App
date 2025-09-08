@@ -173,7 +173,7 @@ if __name__ == '__main__':
     for pair in df.pair.unique():
         new_ = df[df['pair'] == pair]
         new = new_['returns']
-        new.index = pd.to_datetime(new_.start_time)
+        new.index = pd.to_datetime(new_.end_time)
         results_final[pair] = calculate_statistics(new)
 
 
@@ -184,5 +184,6 @@ if __name__ == '__main__':
     # Display the results in Streamlit
     st.write("Backtest Statistics for Each Asset:")
     st.dataframe(results_df)  # Use st.table(results_df) for a static table
+
 
 
