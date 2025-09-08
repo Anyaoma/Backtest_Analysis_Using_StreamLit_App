@@ -33,7 +33,8 @@ This project solves that by creating a **user-friendly dashboard** that gives a 
 - 
 <img width="1919" height="888" alt="image" src="https://github.com/user-attachments/assets/e261e6f7-8eea-4251-926d-27fe8b019452" />
 
-<img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/aba8d99a-da1b-4938-80ca-0f2196f8fcb1" />
+<img width="1905" height="851" alt="image" src="https://github.com/user-attachments/assets/9517343a-277d-49d1-a16a-aa2a603e8cb9" />
+
 
 
 ---
