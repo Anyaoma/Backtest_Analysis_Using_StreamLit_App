@@ -182,10 +182,12 @@ if __name__ == '__main__':
     # Convert results to a DataFrame
     results_df = pd.DataFrame(results_final).T.reset_index()
     results_df.rename(columns={'index': 'Asset'}, inplace=True)
+    results_df.set_index('Asset', inplace=True)
 
     # Display the results in Streamlit
     st.write("Backtest Statistics for Each Asset:")
     st.dataframe(results_df)  # Use st.table(results_df) for a static table
+
 
 
 
