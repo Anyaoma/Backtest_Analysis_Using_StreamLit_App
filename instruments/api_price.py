@@ -6,15 +6,17 @@ class ApiPrice:
         self.bid = float(api_ob['bids'][0]['price'])
 
         base_instrument = self.instrument.split('_')[1]
-        for hc in homeConversions.values():
-            if hc['currency'] == base_instrument:
-                self.sell_conv = float(hc['positionValue'])
-                #self.buy_conv = float(hc['positionValue'])
+
+        if base_instrument in homeConversions:
+            self.sell_conv = float(homeConversions[base_instrument]['positionValue'])
+        else:
+            self.sell_conv = 1.0  # fallback or raise error
         
 
     def __repr__(self):
 
         #return f'{dict(self.instrument=f"{self.sell_conv:.6f}")}'
         return f" {self.instrument},{self.sell_conv:.6f}"
+
 
 
