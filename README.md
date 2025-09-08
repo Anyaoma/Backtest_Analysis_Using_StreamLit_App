@@ -29,6 +29,8 @@ This project solves that by creating a **user-friendly dashboard** that gives a 
 - ⚙️ User inputs to adjust risk amount per trade, currency, and RSI levels
 - 📊 Summary statistics panel for quick insights
 - 🖥️ Built entirely with **Streamlit** for ease of use
+- 
+<img width="1919" height="888" alt="image" src="https://github.com/user-attachments/assets/e261e6f7-8eea-4251-926d-27fe8b019452" />
 
 ---
 
