@@ -44,8 +44,8 @@ class OandaApi:
         url = f"accounts/{comps.ACCOUNT_ID}/pricing"
         params = dict(
             instruments= ','.join(instrument_list),
-            includeHomeConversions = True
-    
+            includeHomeConversions = 'true'
+        
         )
         ok, response = self.make_request(url, params=params)
         if ok == True and 'prices' in response and 'homeConversions' in response:
@@ -54,3 +54,4 @@ class OandaApi:
         
 
 oandaApi = OandaApi()
+
