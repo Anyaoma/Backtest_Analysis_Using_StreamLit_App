@@ -57,7 +57,8 @@ def calculate_statistics(returns):
         'Volatility': qs.stats.volatility(returns, periods=365),
         'VaR': qs.stats.value_at_risk(returns),
         'CVaR': qs.stats.conditional_value_at_risk(returns),
-        '%win': len([x for x in returns if x > 0]) / len(returns)
+        '%win': len([x for x in returns if x > 0]) / len(returns),
+        'Total Return': qs.stats.comp(returns)
     }
     return stats
 
@@ -185,6 +186,7 @@ if __name__ == '__main__':
     # Display the results in Streamlit
     st.write("Backtest Statistics for Each Asset:")
     st.dataframe(results_df)  # Use st.table(results_df) for a static table
+
 
 
 
