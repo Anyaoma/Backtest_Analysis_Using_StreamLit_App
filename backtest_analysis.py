@@ -51,14 +51,16 @@ def run_strategy(pair,time_frame, risk_percent):
 
 def calculate_statistics(returns):
     stats = {
-        'Sharpe Ratio': qs.stats.sharpe(returns),
-        'Annualized Return': qs.stats.cagr(returns),
+        'Sharpe Ratio': qs.stats.sharpe(returns, periods=365),
+        'Annualized Return': qs.stats.cagr(returns, periods=365),
         'Max Drawdown': qs.stats.max_drawdown(returns),
-        'Volatility': qs.stats.volatility(returns),
+        'Volatility': qs.stats.volatility(returns, periods=365),
         'VaR': qs.stats.value_at_risk(returns),
         'CVaR': qs.stats.conditional_value_at_risk(returns),
-        '%win': len([x for x in returns if x>0])/len(returns)}
+        '%win': len([x for x in returns if x > 0]) / len(returns)
+    }
     return stats
+
 
 
 
@@ -183,6 +185,7 @@ if __name__ == '__main__':
     # Display the results in Streamlit
     st.write("Backtest Statistics for Each Asset:")
     st.dataframe(results_df)  # Use st.table(results_df) for a static table
+
 
 
 
