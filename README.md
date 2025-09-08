@@ -2,7 +2,8 @@
 A Streamlit-based application for backtesting trading strategies, providing a bird's-eye view of performance metrics, trade outcomes, and risk management insights. The strategy is the combination of ENGULFING price pattern, and the RSI indicator. This is a personal project undertaken to have a bird's-eye view of the performance of this strategy using just a link. A little disclaimer- the strategy code is hosted on the Streamlit Cloud (free), which can be extremely slow to load. An alternative option is the Heroku cloud- a paid and faster option.
 
 
-<img width="1915" height="967" alt="image" src="https://github.com/user-attachments/assets/7fa4ef18-8608-40a8-8880-d96c528e6513" />
+<img width="1918" height="968" alt="image" src="https://github.com/user-attachments/assets/3dbd8fcb-af57-4e83-b336-875c21bc1261" />
+
 
 
 
