@@ -56,8 +56,25 @@ This project solves that by creating a **user-friendly dashboard** that gives a 
 
 ---
 
+## 6. Results
+- Example backtest of [ENGULFING + RSI] on AUD/JPY 1H data:  
+  - Annualized Return: 2.68%  
+  - Sharpe Ratio: 2.41  
+  - Max Drawdown: -10.49  
+  - Win Rate: 40%
+  - Volatility: 14%
+  - Total Return: 16.44%  
 
-## How to Run
-1. Clone this repository.
+These results demonstrate how the app makes it easy to identify strategy strengths and weaknesses.
+
+---
+
+## 7. How to Run
+1. Clone this repository: git clone https://github.com/Anyaoma/YourRepo.git
 2. Install dependencies: `pip install -r requirements.txt`.
 3. Run the app: `streamlit run app.py`.
+
+## 8. Conclusion
+9. Conclusion
+
+This project provides a flexible and interactive way to analyze trading strategies. By combining robust backtesting with a user-friendly Streamlit dashboard, traders can gain a clear bird’s-eye view of performance and risk metrics, making it easier to iterate, validate, and deploy profitable strategies.
