@@ -1,12 +1,13 @@
 # PERFORMANCE ANALYSIS OF THE ENGULFING AND RSI STRATEGY, USING STREAMLIT 
-
-This is a Streamlit app for displaying the backtest result of a combined ENGULFING and RSI strategy. This project can be conducted using any strategy of choice. This is a personal project undertaken to have a bird's-eye view of the performance of this strategy using just a link. 
-Disclaimer: The code is hosted on the Streamlit Cloud (free), which can be extremely slow to load. An alternative option is the Heroku cloud- a paid and faster option.
+The performance analysis of a strategy using a five-year data horizon, to identify the efficacy of the said strategy and determine its future use.
 
 ![image](https://github.com/user-attachments/assets/5a58ff20-9111-4234-af27-531bb5927461)
 
 
 ## INTRODUCTION
+
+This is a Streamlit app for displaying the backtest result of a combined ENGULFING and RSI strategy. This project can be conducted using any strategy of choice. This is a personal project undertaken to have a bird's-eye view of the performance of this strategy using just a link. 
+Disclaimer: The code is hosted on the Streamlit Cloud (free), which can be extremely slow to load. An alternative option is the Heroku cloud- a paid and faster option.
 
 ## On the interface, you can:
 
